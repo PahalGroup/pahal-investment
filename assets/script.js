@@ -2,19 +2,30 @@
 (function () {
   "use strict";
 
-  // Mobile nav toggle
+  // Mobile nav toggle (+ body scroll lock while open)
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
+  function setNavOpen(open) {
+    if (!toggle || !links) return;
+    links.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("nav-open", open);
+  }
   if (toggle && links) {
     toggle.addEventListener("click", function () {
-      var open = links.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      setNavOpen(!links.classList.contains("open"));
     });
     links.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
-        links.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        setNavOpen(false);
       });
+    });
+    // Close on Escape / resize to desktop
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setNavOpen(false);
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 860) setNavOpen(false);
     });
   }
 
