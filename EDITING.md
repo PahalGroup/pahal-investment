@@ -34,11 +34,11 @@ Visit `http://localhost:8080`.
 
 | What you want to change | File |
 |-------------------------|------|
-| Home page text, ₹18 banner, services, testimonials | `index.html` |
+| Home page text, ₹18 banner, services, 3D hero | `index.html` |
 | Founder story / About | `about.html` |
 | Phone, emails, address, social links, contact form | `contact.html` |
-| Colours, fonts, spacing, mobile layout | `assets/styles.css` |
-| Mobile menu behaviour, contact form → email | `assets/script.js` |
+| Colours, fonts, spacing, mobile layout, 3D hero CSS | `assets/styles.css` |
+| Mobile menu behaviour, contact form → email, hero particles | `assets/script.js` |
 | Logo image | `assets/logo.jpeg` (replace file; keep same name) |
 
 Header navigation and footer exist **on each HTML page** — if you change a menu label, update all three: `index.html`, `about.html`, `contact.html`.
@@ -55,11 +55,12 @@ When editing, search the page for these strings and replace carefully:
 | Phone (link) | `tel:+917020424247` |
 | WhatsApp | `https://wa.me/917020424247` |
 | Demat / Open Account | `https://signup.definedgesecurities.com/mobemail?fr=7pw8lhW9xZk` |
-| Business email | `pahalinvestment@outlook.com` |
-| Secondary email | `pahalj20@gmail.com` |
+| Official email | `pahalinvestment42@gmail.com` |
+| Personal email | `pahalj20@gmail.com` |
 | Hindi tagline | `एक बेहतर कल की पहल` |
 
-**Do not** add the old number `8149945914` anywhere.
+**Do not** add the old number `8149945914` anywhere.  
+**Do not** use `pahalinvestment@outlook.com` — that address is retired.
 
 Tip in GitHub: press `Ctrl+F` / `Cmd+F` and search for `70204` or `wa.me` to find every place a phone/WhatsApp link appears (nav CTA, footer, floating button, banners).
 
@@ -81,22 +82,22 @@ Update the price text there **and** any other “₹18 per order” mentions on 
 
 ---
 
-## Change testimonials
+## Services list
 
-On `index.html`, search for `Suyash`, `Vardhaman`, or `Yash`.  
-Each testimonial is an `<article class="testimonial">` block — edit the quote and the name/role under `<cite>` and `.role`.
+All services live in `index.html` under `#services` (each is an `<article class="service-card">`).  
+Edit the title (`<h3>`) and short blurb (`<p>`) as needed. Keep the list complete — do not leave fake testimonials on the site.
 
 ---
 
 ## Contact form
 
 The form on `contact.html` does **not** save messages on a server.  
-It opens the visitor’s email app addressed to `pahalinvestment@outlook.com` with subject and body filled in.
+It opens the visitor’s email app addressed to `pahalinvestment42@gmail.com` with subject and body filled in.
 
 To change the destination email, edit **both**:
 
 1. The visible email text on `contact.html`
-2. The address inside `assets/script.js` (`mailto:pahalinvestment@outlook.com`)
+2. The address inside `assets/script.js` (`mailto:pahalinvestment42@gmail.com`)
 
 ---
 

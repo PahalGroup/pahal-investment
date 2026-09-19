@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pahal Investment — trusted investment guidance from Durg, Chhattisgarh. Momentum investing, SIPs, demat at ₹18 per order. एक बेहतर कल की पहल">
+  <meta name="description" content="Pahal Investment — trusted investment guidance from Durg, Chhattisgarh. Portfolio building, algo trading, SIPs, demat at ₹18 per order. एक बेहतर कल की पहल">
   <title>Pahal Investment | एक बेहतर कल की पहल</title>
   <link rel="icon" href="assets/logo.jpeg" type="image/jpeg">
   <link rel="stylesheet" href="assets/styles.css">
@@ -29,15 +29,39 @@
   </header>
 
   <main>
-    <section class="hero">
+    <!-- 3D Hero: decorative layer is pointer-events:none; copy sits above on opaque panel -->
+    <section class="hero hero-3d" aria-label="Welcome">
+      <canvas id="hero-particles" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-3d-scene" aria-hidden="true">
+        <div class="float-card fc-1">
+          <span class="fc-label">Portfolio</span>
+          <span class="fc-value">Balanced</span>
+        </div>
+        <div class="float-card fc-2">
+          <span class="fc-label">SIP</span>
+          <span class="fc-value">Long-term</span>
+        </div>
+        <div class="float-card fc-3">
+          <span class="fc-label">Algo</span>
+          <span class="fc-value">Backtest</span>
+        </div>
+        <div class="float-card fc-4">
+          <span class="fc-label">Brokerage</span>
+          <span class="fc-value">₹18</span>
+        </div>
+        <div class="float-orb fo-1"></div>
+        <div class="float-orb fo-2"></div>
+        <div class="float-orb fo-3"></div>
+      </div>
+
       <div class="container hero-grid">
-        <div>
+        <div class="hero-copy-panel">
           <div class="hero-badge">Durg · Chhattisgarh · PAN India clients</div>
           <h1>Invest with clarity.<br>Grow with discipline.</h1>
           <p class="hero-tagline">एक बेहतर कल की पहल</p>
           <p class="hero-lead">
             Pahal Investment helps individuals and families build wealth through
-            momentum investing, SIPs, portfolio planning, and practical trading support —
+            personalized portfolios, SIPs, algorithmic strategies, and practical trading support —
             with transparent brokerage at <strong>₹18 per order</strong>.
           </p>
           <div class="btn-group">
@@ -46,7 +70,7 @@
           </div>
         </div>
         <div class="hero-visual">
-          <div class="hero-logo-wrap">
+          <div class="hero-logo-wrap hero-logo-3d">
             <img src="assets/logo.jpeg" alt="Pahal Investment — hands nurturing growth">
           </div>
         </div>
@@ -68,39 +92,64 @@
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">What we offer</span>
-          <h2>Services built for real investors</h2>
-          <p>Practical guidance across investing styles — from long-term SIPs to active momentum strategies.</p>
+          <h2>Full range of services</h2>
+          <p>From personalized portfolios to algo automation, IPO guidance, and investor education — support across the investing journey.</p>
         </div>
-        <div class="services-grid">
+        <div class="services-grid services-grid-full">
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">📈</div>
-            <h3>Momentum Investing</h3>
-            <p>Identify and ride market strength with structured momentum approaches suited to Indian markets.</p>
+            <div class="service-icon" aria-hidden="true">🗂️</div>
+            <h3>Personalized portfolio building</h3>
+            <p>Custom portfolios shaped around your goals, timeline, and risk comfort.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">💰</div>
-            <h3>SIP Planning</h3>
-            <p>Build disciplined wealth through systematic investment plans aligned to your goals and risk comfort.</p>
+            <div class="service-icon" aria-hidden="true">🧪</div>
+            <h3>Develop &amp; backtest strategies</h3>
+            <p>Build your own trading ideas and validate them with disciplined backtesting.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🧭</div>
-            <h3>Trading Support</h3>
-            <p>Process-driven trading support with chart frameworks and automation tools for clearer decision-making.</p>
+            <div class="service-icon" aria-hidden="true">⚙️</div>
+            <h3>Algorithmic strategy automation</h3>
+            <p>Automate models across options, futures, commodities, currencies, ETFs, and stocks.</p>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">🔍</div>
-            <h3>Stock Analysis</h3>
-            <p>Fundamental and technical perspectives to help you evaluate opportunities with more confidence.</p>
+            <h3>In-depth stock analysis</h3>
+            <p>Fundamental and technical perspectives to evaluate opportunities with more confidence.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🗂️</div>
-            <h3>Portfolio Planning</h3>
-            <p>Personalised portfolio structure across equity and other assets — balanced for growth and resilience.</p>
+            <div class="service-icon" aria-hidden="true">🌱</div>
+            <h3>Long-term SIP &amp; retirement planning</h3>
+            <p>Systematic investing plans aligned to long-horizon goals and retirement needs.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🌐</div>
-            <h3>Multi-asset Guidance</h3>
-            <p>Broader allocation thinking beyond single stocks — helping you diversify thoughtfully over time.</p>
+            <div class="service-icon" aria-hidden="true">📋</div>
+            <h3>Comprehensive IPO guidance</h3>
+            <p>Clear IPO details and process support so you can participate with informed timing.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">📱</div>
+            <h3>Daily trading calls</h3>
+            <p>Ideas via our application and registered broker partners — timely and actionable.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🔓</div>
+            <h3>Trading in unlisted shares</h3>
+            <p>Access and guidance for opportunities in the unlisted equity space.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">📄</div>
+            <h3>Dematerialization of shares</h3>
+            <p>Convert physical share certificates to demat form smoothly and securely.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏦</div>
+            <h3>Bonds &amp; SLBM opportunities</h3>
+            <p>Explore fixed-income and Securities Lending &amp; Borrowing Market avenues.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🎓</div>
+            <h3>Educational platform</h3>
+            <p>Learn markets, strategies, and discipline through practical investor education.</p>
           </article>
         </div>
       </div>
@@ -126,45 +175,6 @@
             <div class="stat-num">PAN India</div>
             <div class="stat-label">Clients across the country</div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="testimonials">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Client voices</span>
-          <h2>What people say about working with us</h2>
-          <p>Honest feedback from clients who value clarity, discipline, and approachable guidance.</p>
-        </div>
-        <div class="testimonials">
-          <article class="testimonial">
-            <blockquote>
-              Pahal explains markets in simple language. The discipline around SIPs and portfolio reviews has helped me stay consistent instead of reacting to every headline.
-            </blockquote>
-            <footer>
-              <cite>Suyash</cite>
-              <span class="role">Teacher</span>
-            </footer>
-          </article>
-          <article class="testimonial">
-            <blockquote>
-              Practical advice and timely support for our investment decisions. We appreciate the transparent approach and the ₹18 brokerage clarity when opening the account.
-            </blockquote>
-            <footer>
-              <cite>Vardhaman Parakh</cite>
-              <span class="role">Gehna Jewellers</span>
-            </footer>
-          </article>
-          <article class="testimonial">
-            <blockquote>
-              From demat setup to ongoing stock discussions, the guidance feels personal and grounded. Happy to recommend Pahal Investment to family and friends.
-            </blockquote>
-            <footer>
-              <cite>Yash Jain</cite>
-              <span class="role">Sri Jain Masale</span>
-            </footer>
-          </article>
         </div>
       </div>
     </section>
@@ -204,8 +214,9 @@
           <h4>Reach us</h4>
           <a href="tel:+917020424247">+91 70204 24247</a>
           <a href="https://wa.me/917020424247" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="mailto:pahalinvestment@outlook.com">pahalinvestment@outlook.com</a>
-          <li>Durg, Chhattisgarh, India</li>
+          <a href="mailto:pahalinvestment42@gmail.com">pahalinvestment42@gmail.com</a>
+          <a href="mailto:pahalj20@gmail.com">pahalj20@gmail.com</a>
+          <span>Durg, Chhattisgarh, India</span>
         </div>
       </div>
       <p class="footer-disclaimer">
